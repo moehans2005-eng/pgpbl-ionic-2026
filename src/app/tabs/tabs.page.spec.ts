@@ -23,4 +23,12 @@ describe('TabsPage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render the tab router outlet and tab buttons', () => {
+    const tabButtons = fixture.nativeElement.querySelectorAll('ion-tab-button');
+    const routerOutlet = fixture.nativeElement.querySelector('ion-router-outlet');
+
+    expect(routerOutlet).not.toBeNull();
+    expect(tabButtons.length).toBeGreaterThanOrEqual(4);
+  });
 });

@@ -1,17 +1,163 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      <ion-icon name="list-circle-outline"></ion-icon> Jadwal Kuliah
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Senin</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid>
+          <ion-row>
+            <ion-col>Mata Kuliah:</ion-col>
+            <ion-col></ion-col>
+            <ion-col>Agama Islam</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>Jam:</ion-col>
+            <ion-col></ion-col>
+            <ion-col>09.00-10.40</ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid>
+          <ion-row>
+            <ion-col>Mata Kuliah:</ion-col>
+            <ion-col></ion-col>
+            <ion-col>Pancasila</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>Jam:</ion-col>
+            <ion-col></ion-col>
+            <ion-col>11.15-12.55</ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid>
+          <ion-row>
+            <ion-col>Mata Kuliah:</ion-col>
+            <ion-col></ion-col>
+            <ion-col>PKN</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>Jam:</ion-col>
+            <ion-col></ion-col>
+            <ion-col>13.00-14.40</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Selasa</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Praktikum PGPBL</ion-card-title>
+            <ion-card-subtitle>11.00-13.00</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Lab.SIG
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-accordion>
+
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Rabu</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid>
+          <ion-row>
+            <ion-col>Mata Kuliah:</ion-col>
+            <ion-col></ion-col>
+            <ion-col>IKK</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>Jam:</ion-col>
+            <ion-col></ion-col>
+            <ion-col>11.10-12.50</ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid>
+          <ion-row>
+            <ion-col>Mata Kuliah:</ion-col>
+            <ion-col></ion-col>
+            <ion-col>SDGL</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>Jam:</ion-col>
+            <ion-col></ion-col>
+            <ion-col>13.00-16.00</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+
+    <ion-accordion value="fourth">
+      <ion-item slot="header" color="light">
+        <ion-label>Kamis</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Metodologi Penelitian</ion-card-title>
+            <ion-card-subtitle>11.00-12.50</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Hall
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Praktikum PPK</ion-card-title>
+            <ion-card-subtitle>13.00-15.00</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Lab. Penginderaan Juah
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-accordion>
+
+    <ion-accordion value="fifth">
+      <ion-item slot="header" color="light">
+        <ion-label>Jumat</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Bahasa Indonesia</ion-card-title>
+            <ion-card-subtitle>07.15-08.55</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Ruang Kelas Soegondo 225
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Praktikum SDA</ion-card-title>
+            <ion-card-subtitle>13.00-15.00</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Lab.Penginderaan Jauh
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
 </ion-content>
