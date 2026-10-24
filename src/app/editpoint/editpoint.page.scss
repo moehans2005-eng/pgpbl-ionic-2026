@@ -1,0 +1,106 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.edit-point-content {
+  --overflow: auto;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --background: #1d1d1f;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.edit-point-content::part(scroll) {
+  display: flex;
+  flex-direction: column;
+}
+
+#mapedit {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  min-height: 180px;
+  flex: 1 1 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: #2a2a2e;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  background: #1d1d1f;
+}
+
+.point-form {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.point-form ion-item {
+  --background: transparent;
+}
+
+.field-item {
+  flex: 0 0 auto;
+  --min-height: 62px;
+  --padding-top: 6px;
+  --padding-bottom: 6px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --inner-padding-top: 0;
+  --inner-padding-bottom: 0;
+  --inner-border-width: 0 0 1px 0;
+  --background: transparent;
+  --border-color: rgba(255, 255, 255, 0.12);
+}
+
+.field-item ion-label {
+  margin-top: 8px;
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f1f1f1;
+}
+
+.field-item ion-input,
+.field-item ion-textarea {
+  min-height: 26px;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --placeholder-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.textarea-item {
+  --min-height: 90px;
+}
+
+.textarea-item ion-textarea {
+  min-height: 52px;
+}
+
+.save-btn {
+  margin: 0;
+  --border-radius: 0;
+  --background: #3f8df9;
+  --background-hover: #2f7ae6;
+  --background-activated: #2f7ae6;
+  --box-shadow: none;
+  min-height: 52px;
+  max-height: 52px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  display: block;
+}

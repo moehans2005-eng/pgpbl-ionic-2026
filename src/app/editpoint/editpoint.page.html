@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/maps"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Point</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="edit-point-content">
+  <div class="form-wrapper">
+    <div id="mapedit"></div>
+
+    <ion-list class="point-form" lines="full">
+      <ion-item class="field-item">
+        <ion-label position="stacked">Name</ion-label>
+        <ion-input [(ngModel)]="name" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item class="field-item">
+        <ion-label position="stacked">Coordinates</ion-label>
+        <ion-input [(ngModel)]="coordinates" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item class="field-item textarea-item">
+        <ion-label position="stacked">Description</ion-label>
+        <ion-textarea [(ngModel)]="description" rows="3" autoGrow="true"></ion-textarea>
+      </ion-item>
+    </ion-list>
+
+    <ion-button class="save-btn" expand="full" (click)="save()">Save</ion-button>
+  </div>
+</ion-content>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-splashscreen',
@@ -6,14 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./splashscreen.page.scss'],
   standalone: false,
 })
-export class SplashscreenPage implements OnInit {
-
-  constructor() { }
+export class SplashscreenPage implements OnInit, OnDestroy {
+  private router = inject(Router);
+  private redirectTimer?: ReturnType<typeof setTimeout>;
 
   ngOnInit() {
-    setTimeout(() => {
-      window.location.href = 'login';
-      }, 2000);
+    this.redirectTimer = setTimeout(() => {
+      void this.router.navigateByUrl('/login');
+    }, 2000);
+  }
+
+  ngOnDestroy() {
+    if (this.redirectTimer) {
+      clearTimeout(this.redirectTimer);
+    }
   }
 
 }

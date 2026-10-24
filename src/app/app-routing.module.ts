@@ -3,12 +3,16 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'splashscreen',
+    loadChildren: () => import('./splashscreen/splashscreen.module').then(m => m.SplashscreenPageModule)
+  },
+  {
     path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
     path: '',
-    redirectTo: '/tabs/maps',
+    redirectTo: '/splashscreen',
     pathMatch: 'full'
   },
   {
@@ -18,7 +22,11 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },  {
+    path: 'editpoint',
+    loadChildren: () => import('./editpoint/editpoint.module').then( m => m.EditpointPageModule)
   }
+
 ];
 @NgModule({
   imports: [

@@ -37,3 +37,23 @@
 @import "@ionic/angular/css/palettes/dark.system.css";
 // leaflet css
 @import "leaflet/dist/leaflet.css"; 
+
+.point-popup-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.point-popup-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 8px;
+  color: #222;
+  background: #fff;
+  border: 0;
+  border-radius: 4px;
+  appearance: none;
+  cursor: pointer;
+}
